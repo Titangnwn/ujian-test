@@ -1,0 +1,65 @@
+/* Reset Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0288d1;
+    color: white;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  #home {
+    background-color: #e3f2fd;
+  }
+  
+  #services {
+    background-color: #bbdefb;
+  }
+  
+  #doctors {
+    background-color: #90caf9;
+  }
+  
+  #contact {
+    background-color: #64b5f6;
+  }
+  
