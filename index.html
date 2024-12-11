@@ -3,49 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layanan Kesehatan</title>
-  <link rel="stylesheet" href="style.css">
+  <title>DODOC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background image styles */
+    #pemeriksaan {
+      background-image: url('logo.jpeg'); /* Ganti dengan URL gambar yang diinginkan */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #fitur {
+      background-image: url('OIP.jpeg'); /* Ganti dengan URL gambar yang diinginkan */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #pendaftaran {
+      background-image: url('logo 2.png'); /* Ganti dengan URL gambar yang diinginkan */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* Overlay untuk teks */
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.75); /* Overlay putih transparan */
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+  </style>
 </head>
-<body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">Layanan Kesehatan</div>
-    <ul class="nav-links">
-      <li><a href="#home">Beranda</a></li>
-      <li><a href="#services">Layanan</a></li>
-      <li><a href="#doctors">Dokter</a></li>
-      <li><a href="#contact">Kontak</a></li>
-      <li><a href="daftar.html">Daftar sekarang</a></li>
-    </ul>
+<body class="bg-gray-50 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-xl font-bold">DODOC</a>
+      <ul class="flex space-x-4">
+        <li><a href="#fitur" class="hover:underline">Fitur</a></li>
+        <li><a href="#tentang" class="hover:underline">Tentang</a></li>
+        <li><a href="#kontak" class="hover:underline">Daftar</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- Content Sections -->
-  <section id="home" class="section">
-    <h1>Selamat Datang di Dodoc</h1>
-    <p>Temukan layanan kesehatan terbaik untuk Anda dan keluarga.</p>
+  <!-- Daftar Pemeriksaan Kesehatan -->
+  <section id="pemeriksaan" class="py-12">
+    <div class="container mx-auto text-center overlay">
+      <h2 class="text-2xl font-bold mb-4">Dodoc</h2>
+      <p class="text-gray-600 mb-6">
+        Adalah web layanan kesehatan dan bisa berkonsultasi dengan dokter pilihan Anda. Segera daftar sekarang.
+      </p>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Pelajari Lebih Lanjut</button>
+    </div>
   </section>
 
-  <section id="services" class="section">
-    <h2>Layanan Kami</h2>
-    <ul>
-      <li>Konsultasi Online</li>
-      <li>Jadwal Janji Temu</li>
-      <li>Rekam Medis Digital</li>
-    </ul>
+  <!-- Bagian Fitur -->
+  <section id="fitur" class="py-12">
+    <div class="container mx-auto text-center overlay">
+      <h2 class="text-2xl font-bold mb-4">Fitur Layanan Kami</h2>
+      <p class="text-gray-600 mb-6">
+        Kami menyediakan fitur layanan kesehatan terbaik untuk Anda dan dokter-dokter tersertifikasi.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 shadow rounded">
+          <h3 class="text-xl font-semibold mb-2">Konsultasi Dokter Bidan</h3>
+          <p class="text-gray-600">Berdiskusi dengan dokter yang ahli untuk kesehatan buah hati Anda.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded">
+          <h3 class="text-xl font-semibold mb-2">Dokter Umum</h3>
+          <p class="text-gray-600">Berdiskusi dengan dokter bila Anda mengalami keluhan.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded">
+          <h3 class="text-xl font-semibold mb-2">Dokter Lansia</h3>
+          <p class="text-gray-600">Menanyakan seputar keluhan untuk menjaga kesehatan keluarga.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="doctors" class="section">
-    <h2>Tim Dokter</h2>
-    <p>Ahli kesehatan profesional siap membantu Anda.</p>
+  <!-- Formulir Pendaftaran -->
+  <section id="pendaftaran" class="py-12">
+    <div class="container mx-auto text-center overlay">
+      <h2 class="text-2xl font-bold mb-4">Formulir Pendaftaran</h2>
+      <p class="text-gray-600 mb-6">Daftar sekarang untuk mendapatkan layanan kesehatan terbaik.</p>
+      <form class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block text-left text-gray-700 font-medium mb-2">Nama Lengkap</label>
+          <input type="text" id="name" class="w-full border-gray-300 border rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-left text-gray-700 font-medium mb-2">Email</label>
+          <input type="email" id="email" class="w-full border-gray-300 border rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block text-left text-gray-700 font-medium mb-2">Nomor Telepon</label>
+          <input type="text" id="phone" class="w-full border-gray-300 border rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Daftar Sekarang</button>
+      </form>
+    </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Kontak Kami</h2>
-    <p>Email: Dodoc@gmail.com</p>
-    <p>Telepon: 0812-3456-7890</p>
-  </section>
-  
-
-  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer id="kontak" class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 DODOC. Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
 </body>
 </html>
